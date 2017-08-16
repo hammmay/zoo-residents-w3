@@ -1,0 +1,17 @@
+{
+  "name": "recipe-box-angular-w3",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Laura Hamilton <laurahamilton9@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
