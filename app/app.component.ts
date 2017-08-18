@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
     <h1>Life Is A Zoo</h1>
     <h3>{{tagline}}</h3>
     <ul>
-      <li>{{firstResident.name}}</li>
+      <li *ngFor="let currentResident of residents">{{currentResident.name}}</li>
     </ul>
   </div>
   `
@@ -15,7 +15,11 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   tagline: string = 'Add A New Resident OR Make Edits To An Existing Resident';
-  firstResident: Resident = new Resident("Francis");
+  residents: Resident[] = [
+    new Resident('Francis'),
+    new Resident('George'),
+    new Resident('Tom')
+  ];
 }
 
 export class Resident {
