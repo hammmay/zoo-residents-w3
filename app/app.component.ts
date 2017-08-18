@@ -15,7 +15,9 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   tagline: string = 'Add A New Resident OR Make Edits To An Existing Resident';
-  firstResident = {
-    name: "Francis"
-  }
+  firstResident: Resident = new Resident("Francis");
+}
+
+export class Resident {
+  constructor(public name: string) { }
 }
