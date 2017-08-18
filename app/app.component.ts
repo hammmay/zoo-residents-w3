@@ -11,13 +11,17 @@ import { Component } from '@angular/core';
     </ul>
     <hr>
     <div>
-       <h3>{{selectedResident.name}}</h3>
-       <h4>Edit This Resident</h4>
-       <label>Enter Resident's Name:</label>
-       <input [(ngModel)]="selectedResident.name">
-       <br>
-       <label>Enter Resident's Age In Years:</label>
-       <input [(ngModel)]="selectedResident.age">
+      <div *ngIf="selectedResident">
+         <h3>{{selectedResident.name}}</h3>
+         <h4>Edit This Resident</h4>
+         <label>Enter Resident's Name:</label>
+         <input [(ngModel)]="selectedResident.name">
+         <br>
+         <label>Enter Resident's Age In Years:</label>
+         <input [(ngModel)]="selectedResident.age">
+         <br>
+         <button (click)="finishedEditing()">Done</button>
+       </div>
     </div>
   </div>
   `
@@ -28,12 +32,15 @@ export class AppComponent {
     new Resident('Francis', 5),
     new Resident('George', 2),
     new Resident('Tom', 1) ];
-  selectedResident: Resident = this.residents[0];
+  selectedResident: null;
 
   editResident(clickedResident) {
     this.selectedResident = clickedResident;
   }
 
+  finishedEditing() {
+    this.selectedResident = null;
+  }
 
   ageColor(currentResident){
     if (currentResident.age >= 2){
