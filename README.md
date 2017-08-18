@@ -45,8 +45,8 @@ You will need the following things properly installed on your computer.
 
 |Behavior - Plain English|Input|Output|
 |---|---|---|
-|User fills out all fields on the "Ask The Community" form and clicks the "Publish" button to see the question and author appended to the list of questions|User fills out the form and presses the "Publish" button|The new question appears at the bottom of the list of questions|
-<!-- |User clicks on a question on the homepage and is taken to a unique page for the question|User clicks on the first question in the list|User is redirected to that question's page|
+|User clicks on the name of an animal and an edit form appears for the animal that was clicked upon|User clicks on the first name on the list|Edit field form appears for that animal|
+<!-- |User fills out all fields on the "Ask The Community" form and clicks the "Publish" button to see the question and author appended to the list of questions|User fills out the form and presses the "Publish" button|The new question appears at the bottom of the list of questions|
 |User clicks on "Home" navigation header from any page on the site and is taken to the homepage|User clicks on "Home" navigation header|User is redirected to the homepage|
 |User clicks on "About" navigation header from any page on the site and is taken to the "About" page|User clicks on "About" navigation header|User is redirected to the "About" page|
 |User clicks on "Contact" navigation header from any page on the site and is taken to the "Contact" page|User clicks on "Contact" navigation header|User is redirected to the "Contact" page|
