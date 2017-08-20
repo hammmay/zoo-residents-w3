@@ -8,7 +8,7 @@ import { Resident } from './resident.model';
       <h1>Life Is A Zoo</h1>
       <h3>Add A New Resident OR Make Edits To An Existing Resident</h3>
       <hr>
-      <resident-list></resident-list>
+      <resident-list [childResidentList]="masterResidentList" (clickSender)="editResident($event)"></resident-list>
       <div>
         <div *ngIf="selectedResident">
            <h3>{{selectedResident.name}}</h3>
@@ -28,6 +28,13 @@ import { Resident } from './resident.model';
 
 export class AppComponent {
   selectedResident: null;
+
+  masterResidentList: Resident[] = [
+    new Resident('Francis', 5),
+    new Resident('George', 2),
+    new Resident('Tom', 1)
+  ];
+
 
   editResident(clickedResident) {
     this.selectedResident = clickedResident;

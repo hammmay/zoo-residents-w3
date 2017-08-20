@@ -1,21 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Resident } from './resident.model';
 
 @Component({
   selector: 'resident-list',
   template: `
   <ul>
-    <li [class]="ageColor(currentResident)" *ngFor="let currentResident of residents">{{currentResident.name}}   <button (click)="editResident(currentResident)">Make Some Changes</button></li>
+    <li *ngFor="let currentResident of childResidentList">{{currentResident.name}} <button (click)="editClicked(currentResident)">Make Some Changes</button></li>
   </ul>
   `
 })
 
 export class ResidentListComponent {
-  residents: Resident[] = [
-    new Resident('Francis', 5),
-    new Resident('George', 2),
-    new Resident('Tom', 1)
-  ];
+  @Input() childResidentList: Resident[];
+  @Output() clickSender = new EventEmitter();
+
+  editClicked(residentToEdit: Resident) {
+    this.clickSender.emit(residentToEdit);
+  }
 
   ageColor(currentResident){
     if (currentResident.age >= 2){
