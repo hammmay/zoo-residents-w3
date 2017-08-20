@@ -7,21 +7,9 @@ import { Resident } from './resident.model';
     <div class="container">
       <h1>Life Is A Zoo</h1>
       <h3>Add A New Resident OR Make Edits To An Existing Resident</h3>
-      <hr>
       <resident-list [childResidentList]="masterResidentList" (clickSender)="editResident($event)"></resident-list>
-      <div>
-        <div *ngIf="selectedResident">
-           <h3>{{selectedResident.name}}</h3>
-           <h4>Edit This Resident</h4>
-           <label>Enter Resident's Name:</label>
-           <input [(ngModel)]="selectedResident.name">
-           <br>
-           <label>Enter Resident's Age In Years:</label>
-           <input [(ngModel)]="selectedResident.age">
-           <br>
-           <button (click)="finishedEditing()">Done</button>
-         </div>
-      </div>
+      <hr>
+      <edit-resident [childSelectedResident]="selectedResident" (doneButtonClickedSender)="finishedEditing()"></edit-resident>
     </div>
   `
 })
