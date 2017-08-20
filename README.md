@@ -45,17 +45,10 @@ You will need the following things properly installed on your computer.
 
 |Behavior - Plain English|Input|Output|
 |---|---|---|
-|User clicks on the name of an animal and an edit form appears for the animal that was clicked upon|User clicks on the first name on the list|Edit field form appears for that animal|
-<!-- |User fills out all fields on the "Ask The Community" form and clicks the "Publish" button to see the question and author appended to the list of questions|User fills out the form and presses the "Publish" button|The new question appears at the bottom of the list of questions|
-|User clicks on "Home" navigation header from any page on the site and is taken to the homepage|User clicks on "Home" navigation header|User is redirected to the homepage|
-|User clicks on "About" navigation header from any page on the site and is taken to the "About" page|User clicks on "About" navigation header|User is redirected to the "About" page|
-|User clicks on "Contact" navigation header from any page on the site and is taken to the "Contact" page|User clicks on "Contact" navigation header|User is redirected to the "Contact" page|
-|User clicks on the "Delete This Question" button on a question's page and they are given a confirmation prompt where if confirmed, they are redirected to the homepage where the question is now gone|User clicks on the "Delete This Question" button and confirms on the prompt|User is taken to homepage and the deleted question is gone from the list of questions|
-|User clicks on the "Delete Answer" button on a question's page and they are given a confirmation prompt where if confirmed, they are redirected to the homepage where the answer is now gone from the question page|User clicks on the "Delete Answer" button and confirms on the prompt|User is taken to homepage and when they return to the question's page, the deleted answer is gone from the list of answers|
-|User clicks on the "Update This Question" button and an update form appears|User clicks on the "Update This Question" button|A form with the question's fields appear|
-|User clicks on the "Save Changes" button on a question's page after filling out the Update form and they are redirected to the homepage where the updated question is displayed|User updates the field "Still Your Question?" with the name "John" and clicks the "Save Changes" button|User is redirected to homepage where the author name is now "John" on the question that was updated|
-|User clicks on the "Give An Answer" button and an answer form appears|User clicks on the "Give An Answer" button|A form with the answer's fields appear|
-|User clicks on the "Submit" button on a question's page after filling out the New Answer form and they see their answer for the question is appended to the Answers list|User types "Greg" in the field "Who Dis?" and types "Google It" into the "Add Your Two-Cents" field before clicking on the "Button" button|User is taken to homepage and when they return to the question's page, "Google It - Answered by Greg" is now appended as an answer| -->
+|User fills out all fields on the "Add A New Resident" form and clicks the "Add This Resident" button to see the new resident appended to the list of residents|User fills out the form and presses the "Add This Resident" button|The new resident appears at the bottom of the list of animals|
+|User clicks on the edit button below an animal and an edit form appears for the animal that was clicked upon|User clicks on "Edit Ed's Details" on the list|Edit field form appears for Ed|
+|User clicks the "Done" button after making edits to any field on the edit form, and the changes are saved for the resident|User changes resident's location to "Safari" on the edit form and clicks the "Done" button|Resident's location is saved as "Safari"|
+|User selects the "Young", "Older", or "All" option from the drop down age filter and the residents list change to only the resident's that qualify under the filter selected|User selects the "Young" filter|Residents under the age of 2 years old are displayed|
 
 ### Legal
 
