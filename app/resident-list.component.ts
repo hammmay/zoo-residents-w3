@@ -17,7 +17,20 @@ import { Resident } from './resident.model';
     Age In Years: {{currentResident.age}}
     <br>
     Species: {{currentResident.species}}
-    <button (click)="editClicked(currentResident)">Make Some Changes</button></li>
+    <br>
+    Diet: {{currentResident.diet}}
+    <br>
+    Location: {{currentResident.location}}
+    <br>
+    Caretakers: {{currentResident.caretakers}}
+    <br>
+    Sex: {{currentResident.sex}}
+    <br>
+    Likes: {{currentResident.likes}}
+    <br>
+    Dislikes: {{currentResident.dislikes}}
+    <br>
+    <button (click)="editClicked(currentResident)">Edit {{currentResident.name}}'s Details</button></li>
   </ul>
   `
 })

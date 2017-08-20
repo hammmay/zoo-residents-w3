@@ -15,9 +15,27 @@ import { Resident } from './resident.model';
         <label>Enter New Resident's Species:</label>
         <input #newSpecies>
         <br>
+        <label>Enter New Resident's Diet:</label>
+        <input #newDiet>
+        <br>
+        <label>Enter New Resident's Location:</label>
+        <input #newLocation>
+        <br>
+        <label>Number of Caretakers needed for New Resident:</label>
+        <input #newCaretakers>
+        <br>
+        <label>Enter New Resident's Sex:</label>
+        <input #newSex>
+        <br>
+        <label>Enter New Resident's Likes:</label>
+        <input #newLikes>
+        <br>
+        <label>Enter New Resident's Dislikes:</label>
+        <input #newDislikes>
+        <br>
       </div>
       <div>
-        <button (click)="submitForm(newName.value, newAge.value, newSpecies.value); newName.value=''; newAge.value=''; newSpecies.value='';">Add This Resident</button>
+        <button (click)="submitForm(newName.value, newAge.value, newSpecies.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value); newName.value=''; newAge.value=''; newSpecies.value=''; newDiet.value=''; newLocation.value=''; newCaretakers.value=''; newSex.value=''; newLikes.value=''; newDislikes.value='';">Add This Resident</button>
       </div>
   `
 })
@@ -25,8 +43,8 @@ import { Resident } from './resident.model';
 export class NewResidentComponent {
   @Output() newResidentSender = new EventEmitter();
 
-  submitForm(name: string, age: number, species: string) {
-    var newResidentToAdd: Resident = new Resident(name, age, species);
+  submitForm(name: string, age: number, species: string, diet: string, location: string, caretakers: number, sex: string, likes: string, dislikes: string) {
+    var newResidentToAdd: Resident = new Resident(name, age, species, diet, location, caretakers, sex, likes, dislikes);
     this.newResidentSender.emit(newResidentToAdd);
   }
 }
