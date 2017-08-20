@@ -12,8 +12,11 @@ import { Resident } from './resident.model';
 
 
   <ul>
-    <li *ngFor="let currentResident of childResidentList | youngAndOld:filterByYoungAndOld">Name: {{currentResident.name}}, Age In Years: {{currentResident.age}}
-
+    <li *ngFor="let currentResident of childResidentList | youngAndOld:filterByYoungAndOld">Name: {{currentResident.name}}
+    <br>
+    Age In Years: {{currentResident.age}}
+    <br>
+    Species: {{currentResident.species}}
     <button (click)="editClicked(currentResident)">Make Some Changes</button></li>
   </ul>
   `
@@ -32,13 +35,5 @@ export class ResidentListComponent {
   onChange(optionFromMenu) {
     this.filterByYoungAndOld = optionFromMenu;
   }
-
-  // ageColor(currentResident){
-  //   if (currentResident.age >= 2){
-  //     return "bg-warning";
-  //   } else {
-  //     return "bg-info";
-  //   }
-  // }
 
 }

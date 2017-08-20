@@ -11,9 +11,13 @@ import { Resident } from './resident.model';
         <br>
         <label>Enter New Resident's Age In Years:</label>
         <input #newAge>
+        <br>
+        <label>Enter New Resident's Species:</label>
+        <input #newSpecies>
+        <br>
       </div>
       <div>
-        <button (click)="submitForm(newName.value, newAge.value); newName.value=''; newAge.value='';">Add This Resident</button>
+        <button (click)="submitForm(newName.value, newAge.value, newSpecies.value); newName.value=''; newAge.value=''; newSpecies.value='';">Add This Resident</button>
       </div>
   `
 })
@@ -21,8 +25,8 @@ import { Resident } from './resident.model';
 export class NewResidentComponent {
   @Output() newResidentSender = new EventEmitter();
 
-  submitForm(name: string, age: number) {
-    var newResidentToAdd: Resident = new Resident(name, age);
+  submitForm(name: string, age: number, species: string) {
+    var newResidentToAdd: Resident = new Resident(name, age, species);
     this.newResidentSender.emit(newResidentToAdd);
   }
 }

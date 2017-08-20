@@ -14,6 +14,9 @@ import { Resident } from './resident.model';
          <label>Enter Resident's Age In Years:</label>
          <input [(ngModel)]="childSelectedResident.age">
          <br>
+         <label>Enter Resident's Species:</label>
+         <input [(ngModel)]="childSelectedResident.species">
+         <br>
          <button (click)="doneButtonClicked()">Done</button>
        </div>
     </div>
