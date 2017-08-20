@@ -10,6 +10,7 @@ import { Resident } from './resident.model';
       <resident-list [childResidentList]="masterResidentList" (clickSender)="editResident($event)"></resident-list>
       <hr>
       <edit-resident [childSelectedResident]="selectedResident" (doneButtonClickedSender)="finishedEditing()"></edit-resident>
+      <new-resident (newResidentSender)="addResident($event)"></new-resident>
     </div>
   `
 })
@@ -30,6 +31,10 @@ export class AppComponent {
 
   finishedEditing() {
     this.selectedResident = null;
+  }
+
+  addResident(newResidentFromChild: Resident) {
+    this.masterResidentList.push(newResidentFromChild);
   }
 
 }
