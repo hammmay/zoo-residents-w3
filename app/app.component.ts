@@ -19,9 +19,6 @@ export class AppComponent {
   selectedResident: null;
 
   masterResidentList: Resident[] = [
-    new Resident('Francis', 5),
-    new Resident('George', 2),
-    new Resident('Tom', 1)
   ];
 
 
